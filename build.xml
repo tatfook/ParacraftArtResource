@@ -6,13 +6,22 @@ Using ant to create the minimum art resource for paracraft
     <property name="ParaEngineAB_Root" value="${env.ParaEngineAB_Root}"/>
 
     <property name="res" value="${basedir}/res"/>  
+    <property name="npl_packages" value="${basedir}/npl_packages"/>  
 
     <target name="makeDirectory" >  
         <delete dir="${res}"/>  
         <mkdir dir="${res}"/>  
     </target>  
-    <target name="copyScript" depends="copyRes" description="copy art resource and script">  
-
+    <target name="copyScript" description="copy script">  
+        <exec executable="cmd">
+            <arg value="/c"/>
+            <arg value="InstallPackages.bat"/>
+            <arg value="-p"/>
+        </exec>
+        <copy todir="${res}/script">
+            <fileset dir="${npl_packages}">
+            </fileset>
+        </copy>
     </target>  
     
     <target name="copyRes" depends="makeDirectory" description="create paracraft res">  
