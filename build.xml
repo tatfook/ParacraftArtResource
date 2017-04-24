@@ -1,0 +1,179 @@
+<!--
+Using ant to create the minimum art resource for paracraft
+-->
+<project name="ParacraftArtResource" basedir="." default="copyRes"> 
+    <property environment="env"/>
+    <property name="ParaEngineAB_Root" value="${env.ParaEngineAB_Root}"/>
+
+    <property name="res" value="${basedir}/res"/>  
+
+    <target name="makeDirectory" >  
+        <delete dir="${res}"/>  
+        <mkdir dir="${res}"/>  
+    </target>  
+    <target name="copyScript" depends="copyRes" description="copy art resource and script">  
+
+    </target>  
+    
+    <target name="copyRes" depends="makeDirectory" description="create paracraft res">  
+        <copy file="${ParaEngineAB_Root}/config/ParaCraft/bootstrapper.xml" tofile="${res}/config/bootstrapper.xml"/>
+        <copy file="${ParaEngineAB_Root}/config/ParaCraft/bootstrapper_safemode.xml" tofile="${res}/config/bootstrapper_safemode.xml"/>
+        <copy file="${ParaEngineAB_Root}/config/ParaCraft/commands.xml" tofile="${res}/config/commands.xml"/>
+        <copy file="${ParaEngineAB_Root}/config/ParaCraft/gameclient.config.xml" tofile="${res}/config/gameclient.config.xml"/>
+        <copy file="${ParaEngineAB_Root}/Database/apps.paracraft.db" tofile="${res}/Database/apps.db"/>
+        <copy file="${ParaEngineAB_Root}/Database/characters.db" tofile="${res}/Database/characters.db"/>
+
+        <copy todir="${res}/model/blockworld">
+            <fileset dir="${ParaEngineAB_Root}/model/blockworld">
+                <include name="**/*.png"/>
+                <include name="**/*.x"/>
+            </fileset>
+        </copy>
+        <copy todir="${res}/character/Animation/CC">
+            <fileset dir="${ParaEngineAB_Root}/character/Animation/CC">
+                <include name="**/*.x"/>
+            </fileset>
+        </copy>
+        <copy todir="${res}/character/CC/01char">
+            <fileset dir="${ParaEngineAB_Root}/character/CC/01char">
+                <include name="**/*.x"/>
+                <include name="**/*.png"/>
+            </fileset>
+        </copy>
+        <copy todir="${res}/character/CC/02human">
+            <fileset dir="${ParaEngineAB_Root}/character/CC/02human">
+                <include name="**/*.x"/>
+                <include name="**/*.png"/>
+            </fileset>
+        </copy>
+        <copy todir="${res}/character/CC/03animals">
+            <fileset dir="${ParaEngineAB_Root}/character/CC/03animals">
+                <include name="**/*.x"/>
+                <include name="**/*.png"/>
+                <include name="**/*.dds"/>
+            </fileset>
+        </copy>
+        <copy todir="${res}/character/CC/05effect">
+            <fileset dir="${ParaEngineAB_Root}/character/CC/05effect">
+                <include name="**/*.x"/>
+                <include name="**/*.png"/>
+                <include name="**/*.dds"/>
+            </fileset>
+        </copy>
+        <copy todir="${res}/character/CC/06vehicle">
+            <fileset dir="${ParaEngineAB_Root}/character/CC/06vehicle">
+                <include name="**/*.x"/>
+                <include name="**/*.png"/>
+            </fileset>
+        </copy>
+        <copy todir="${res}/character/v5/06quest/JinBi">
+            <fileset dir="${ParaEngineAB_Root}/character/v5/06quest/JinBi">
+                <include name="**/*.x"/>
+                <include name="**/*.png"/>
+                <include name="**/*.dds"/>
+            </fileset>
+        </copy>
+        <copy todir="${res}/character/v5/06quest/HeartOfFlyingDragon">
+            <fileset dir="${ParaEngineAB_Root}/character/v5/06quest/HeartOfFlyingDragon">
+                <include name="**/*.x"/>
+                <include name="**/*.png"/>
+                <include name="**/*.dds"/>
+            </fileset>
+        </copy>
+        <copy todir="${res}/character/v5/06quest/cartridge">
+            <fileset dir="${ParaEngineAB_Root}/character/v5/06quest/cartridge">
+                <include name="**/*.x"/>
+            </fileset>
+        </copy>
+         <copy todir="${res}/Texture/Aries/Creator/player">
+            <fileset dir="${ParaEngineAB_Root}/Texture/Aries/Creator/player">
+                <include name="**/*.png"/>
+            </fileset>
+        </copy>
+         <copy todir="${res}/Texture/blocks">
+            <fileset dir="${ParaEngineAB_Root}/Texture/blocks">
+                <include name="**/*.png"/>
+            </fileset>
+        </copy>
+        <copy todir="${res}/Texture/Effect">
+            <fileset dir="${ParaEngineAB_Root}/Texture/Effect">
+                <include name="**/*.png"/>
+                <include name="**/*.dds"/>
+            </fileset>
+        </copy>
+        <copy todir="${res}/Audio/Haqi/creator">
+            <fileset dir="${ParaEngineAB_Root}/Audio/Haqi/creator">
+                <include name="**/*.ogg"/>
+            </fileset>
+        </copy>
+        <copy todir="${res}/worlds/BlockTextures/official">
+            <fileset dir="${ParaEngineAB_Root}/worlds/BlockTextures/official">
+            </fileset>
+        </copy>
+        <copy todir="${res}/worlds/Templates/Empty/flatsandland">
+            <fileset dir="${ParaEngineAB_Root}/worlds/Templates/Empty/flatsandland">
+            </fileset>
+        </copy>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Item/1908_RightHand_Normal_Level10.png" tofile="${res}/Texture/Aries/Item/1908_RightHand_Normal_Level10.png"/>
+        <copy file="${ParaEngineAB_Root}/character/v5/09effect/Texture/Yan01_Blue.dds" tofile="${res}/Texture/Aries/Item/character/v5/09effect/Texture/Yan01_Blue.dds"/>
+        <copy file="${ParaEngineAB_Root}/character/v6/09effect/Block_Piece/Block_piece.x" tofile="${res}/character/v6/09effect/Block_Piece/Block_piece.x"/>
+        <copy file="${ParaEngineAB_Root}/character/v5/09effect/texture/rotundityglow_blue.dds" tofile="${res}/character/v5/09effect/texture/rotundityglow_blue.dds"/>
+        <copy file="${ParaEngineAB_Root}/character/v5/09effect/texture/guangxian01_yellow.dds" tofile="${res}/character/v5/09effect/texture/guangxian01_yellow.dds"/>
+        <copy file="${ParaEngineAB_Root}/character/v5/09effect/texture/rotundityglow_white01.dds" tofile="${res}/character/v5/09effect/texture/rotundityglow_white01.dds"/>
+        <copy file="${ParaEngineAB_Root}/character/v5/09effect/texture/starglow01_white.dds" tofile="${res}/character/v5/09effect/texture/starglow01_white.dds"/>
+        <copy file="${ParaEngineAB_Root}/Texture/alphadot.png" tofile="${res}/Texture/alphadot.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/checkbox.png" tofile="${res}/Texture/checkbox.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/dxutcontrols.dds" tofile="${res}/Texture/dxutcontrols.dds"/>
+        <copy file="${ParaEngineAB_Root}/Texture/paracraft.jpg" tofile="${res}/Texture/paracraft.jpg"/>
+        <copy file="${ParaEngineAB_Root}/Texture/radiobox.png" tofile="${res}/Texture/radiobox.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Transparent.png" tofile="${res}/Texture/Transparent.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/uncheckbox.png" tofile="${res}/Texture/uncheckbox.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/unradiobox.png" tofile="${res}/Texture/unradiobox.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/whitedot.png" tofile="${res}/Texture/whitedot.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/ripple.dds" tofile="${res}/Texture/ripple.dds"/>
+        <copy file="${ParaEngineAB_Root}/Texture/ripple/WaterBumpMap.dds" tofile="${res}/Texture/ripple/WaterBumpMap.dds"/>
+        <copy file="${ParaEngineAB_Root}/Texture/3DMapSystem/common/ThemeLightBlue/container_bg.png" tofile="${res}/Texture/3DMapSystem/common/ThemeLightBlue/container_bg.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/3DMapSystem/common/ThemeLightBlue/slider_background_16.png" tofile="${res}/Texture/3DMapSystem/common/ThemeLightBlue/slider_background_16.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/3DMapSystem/common/ThemeLightBlue/slider_button_16.png" tofile="${res}/Texture/3DMapSystem/common/ThemeLightBlue/slider_button_16.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Common/ThemeKid/btn_thick_32bits.png" tofile="${res}/Texture/Aries/Common/ThemeKid/btn_thick_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Common/ThemeKid/btn_thick_hl_32bits.png" tofile="${res}/Texture/Aries/Common/ThemeKid/btn_thick_hl_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Common/ThemeKid/btn_thick_s_32bits.png" tofile="${res}/Texture/Aries/Common/ThemeKid/btn_thick_s_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Common/ThemeKid/btn_thick_s_hl_32bits.png" tofile="${res}/Texture/Aries/Common/ThemeKid/btn_thick_s_hl_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Common/ThemeKid/button_32bits.png" tofile="${res}/Texture/Aries/Common/ThemeKid/button_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Common/ThemeKid/button_highlight_32bits.png" tofile="${res}/Texture/Aries/Common/ThemeKid/button_highlight_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Common/ThemeKid/checkbox2_32bits.png" tofile="${res}/Texture/Aries/Common/ThemeKid/checkbox2_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Common/ThemeKid/dropdown_bg.png" tofile="${res}/Texture/Aries/Common/ThemeKid/dropdown_bg.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Common/ThemeKid/dropdown_bg_32bits.png" tofile="${res}/Texture/Aries/Common/ThemeKid/dropdown_bg_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Common/ThemeKid/dropdown_btn_32bits.png" tofile="${res}/Texture/Aries/Common/ThemeKid/dropdown_btn_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Common/ThemeKid/editbox_32bits.png" tofile="${res}/Texture/Aries/Common/ThemeKid/editbox_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Common/ThemeKid/radio_32bits.png" tofile="${res}/Texture/Aries/Common/ThemeKid/radio_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Common/ThemeKid/std_button_default_32bits.png" tofile="${res}/Texture/Aries/Common/ThemeKid/std_button_default_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Common/ThemeKid/uncheckbox2_32bits.png" tofile="${res}/Texture/Aries/Common/ThemeKid/uncheckbox2_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Common/ThemeTeen/tooltip_bg_32bits.png" tofile="${res}/Texture/Aries/Common/ThemeTeen/tooltip_bg_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Common/gradient_white_32bits.png" tofile="${res}/Texture/Aries/Common/gradient_white_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Common/AssetLoader_32bits.png" tofile="${res}/Texture/Aries/Common/AssetLoader_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Creator/border_bg_32bits.png" tofile="${res}/Texture/Aries/Creator/border_bg_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Creator/Desktop/Inventory_32bits.png" tofile="${res}/Texture/Aries/Creator/Desktop/Inventory_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Creator/Desktop/TouchUI.png" tofile="${res}/Texture/Aries/Creator/Desktop/TouchUI.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Creator/Mobile/blocks_Background.png" tofile="${res}/Texture/Aries/Creator/Mobile/blocks_Background.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Creator/Mobile/blocks_logo.png" tofile="${res}/Texture/Aries/Creator/Mobile/blocks_logo.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Creator/Mobile/blocks_UI_32bits.png" tofile="${res}/Texture/Aries/Creator/Mobile/blocks_UI_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Creator/Theme/colorpicker_button_32bits.png" tofile="${res}/Texture/Aries/Creator/Theme/colorpicker_button_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Creator/Theme/CommonControl_32bits.png" tofile="${res}/Texture/Aries/Creator/Theme/CommonControl_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Creator/Theme/GameCommonIcon_32bits.png" tofile="${res}/Texture/Aries/Creator/Theme/GameCommonIcon_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Creator/Theme/scroll_thumb_32bits.png" tofile="${res}/Texture/Aries/Creator/Theme/scroll_thumb_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Creator/Theme/scroll_track_32bits.png" tofile="${res}/Texture/Aries/Creator/Theme/scroll_track_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/texture/aries/creator/snipper/snippercamera.png" tofile="${res}/texture/aries/creator/snipper/snippercamera.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Login/Login/teen/loading_gray_32bits.png" tofile="${res}/Texture/Aries/Login/Login/teen/loading_gray_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Login/Login/teen/loading_green_32bits.png" tofile="${res}/Texture/Aries/Login/Login/teen/loading_green_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Login/Login/teen/progressbar_green_tile.png" tofile="${res}/Texture/Aries/Login/Login/teen/progressbar_green_tile.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/common/cloud.dds" tofile="${res}/Texture/common/cloud.dds"/>
+        <copy file="${ParaEngineAB_Root}/Texture/common/Sunset.dds" tofile="${res}/Texture/common/Sunset.dds"/>
+        <copy file="${ParaEngineAB_Root}/worlds/BlockTextures/PackagesInfo.xml" tofile="${res}/worlds/BlockTextures/PackagesInfo.xml"/>
+        <copy file="${ParaEngineAB_Root}/fonts/DroidSansFallback.ttf" tofile="${res}/fonts/DroidSansFallback.ttf"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Creator/Mobile/blocks_Background.png" tofile="${res}/Texture/Aries/Creator/Mobile/blocks_Background.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/dxutcontrols.dds" tofile="${res}/Texture/dxutcontrols.dds"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Creator/Theme/CommonControl_32bits.png" tofile="${res}/Texture/Aries/Creator/Theme/CommonControl_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Creator/Theme/GameCommonIcon_32bits.png" tofile="${res}/Texture/Aries/Creator/Theme/GameCommonIcon_32bits.png"/>
+    </target>  
+</project>
