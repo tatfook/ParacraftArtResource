@@ -133,7 +133,7 @@ Using ant to create the minimum art resource for paracraft
         <copy file="${ParaEngineAB_Root}/Texture/alphadot.png" tofile="${res}/Texture/alphadot.png"/>
         <copy file="${ParaEngineAB_Root}/Texture/checkbox.png" tofile="${res}/Texture/checkbox.png"/>
         <copy file="${ParaEngineAB_Root}/Texture/dxutcontrols.dds" tofile="${res}/Texture/dxutcontrols.dds"/>
-        <copy file="${ParaEngineAB_Root}/Texture/paracraft.jpg" tofile="${res}/Texture/paracraft.jpg"/>
+        <!--<copy file="${ParaEngineAB_Root}/Texture/paracraft.jpg" tofile="${res}/Texture/paracraft.jpg"/>-->
         <copy file="${ParaEngineAB_Root}/Texture/radiobox.png" tofile="${res}/Texture/radiobox.png"/>
         <copy file="${ParaEngineAB_Root}/Texture/Transparent.png" tofile="${res}/Texture/Transparent.png"/>
         <copy file="${ParaEngineAB_Root}/Texture/uncheckbox.png" tofile="${res}/Texture/uncheckbox.png"/>
@@ -179,10 +179,21 @@ Using ant to create the minimum art resource for paracraft
         <copy file="${ParaEngineAB_Root}/Texture/common/cloud.dds" tofile="${res}/Texture/common/cloud.dds"/>
         <copy file="${ParaEngineAB_Root}/Texture/common/Sunset.dds" tofile="${res}/Texture/common/Sunset.dds"/>
         <copy file="${ParaEngineAB_Root}/worlds/BlockTextures/PackagesInfo.xml" tofile="${res}/worlds/BlockTextures/PackagesInfo.xml"/>
-        <copy file="${ParaEngineAB_Root}/fonts/DroidSansFallback.ttf" tofile="${res}/fonts/DroidSansFallback.ttf"/>
+        <copy file="${ParaEngineAB_Root}/fonts/ParaEngineThaiFont.ttf" tofile="${res}/fonts/ParaEngineThaiFont.ttf"/>
         <copy file="${ParaEngineAB_Root}/Texture/Aries/Creator/Mobile/blocks_Background.png" tofile="${res}/Texture/Aries/Creator/Mobile/blocks_Background.png"/>
         <copy file="${ParaEngineAB_Root}/Texture/dxutcontrols.dds" tofile="${res}/Texture/dxutcontrols.dds"/>
         <copy file="${ParaEngineAB_Root}/Texture/Aries/Creator/Theme/CommonControl_32bits.png" tofile="${res}/Texture/Aries/Creator/Theme/CommonControl_32bits.png"/>
-        <copy file="${ParaEngineAB_Root}/Texture/Aries/Creator/Theme/GameCommonIcon_32bits.png" tofile="${res}/Texture/Aries/Creator/Theme/GameCommonIcon_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/kidui/main/cursor.tga" tofile="${res}/Texture/kidui/main/cursor.tga"/>
+        <copy file="${ParaEngineAB_Root}/config/Aries/creator/PlayerAssetFile.xml" tofile="${res}/config/Aries/creator/PlayerAssetFile.xml"/>
+        <copy file="${ParaEngineAB_Root}/config/Aries/creator/PlayerSkins.xml" tofile="${res}/config/Aries/creator/PlayerSkins.xml"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aquarius/Common/Frame3_shadow_32bits.png" tofile="${res}/Texture/Aquarius/Common/Frame3_shadow_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aquarius/Common/Frame3_32bits.png" tofile="${res}/Texture/Aquarius/Common/Frame3_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/3DMapSystem/common/script_gear.png" tofile="${res}/Texture/3DMapSystem/common/script_gear.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aquarius/Common/Frame3_32bits.png" tofile="${res}/Texture/Aquarius/Common/Frame3_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/3DMapSystem/common/script_gear.png" tofile="${res}/Texture/3DMapSystem/common/script_gear.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aquarius/Common/Frame_Close_32bits.png" tofile="${res}/Texture/Aquarius/Common/Frame_Close_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/Quest/TutorialMouse_LeftClick_small_32bits.png" tofile="${res}/Texture/Aries/Quest/TutorialMouse_LeftClick_small_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/NPCs/RainbowFlower/time_bg_32bits.png" tofile="${res}/Texture/Aries/NPCs/RainbowFlower/time_bg_32bits.png"/>
+        <copy file="${ParaEngineAB_Root}/Texture/Aries/NPCs/RainbowFlower/Clock_bg_32bits.png" tofile="${res}/Texture/Aries/NPCs/RainbowFlower/Clock_bg_32bits.png"/>
     </target>  
 </project>
