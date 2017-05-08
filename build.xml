@@ -181,7 +181,6 @@ Using ant to create the minimum art resource for paracraft
         <copy file="${ParaEngineAB_Root}/Texture/Aries/Login/Login/teen/progressbar_green_tile.png" tofile="${res}/Texture/Aries/Login/Login/teen/progressbar_green_tile.png"/>
         <copy file="${ParaEngineAB_Root}/Texture/common/cloud.dds" tofile="${res}/Texture/common/cloud.dds"/>
         <copy file="${ParaEngineAB_Root}/Texture/common/Sunset.dds" tofile="${res}/Texture/common/Sunset.dds"/>
-        <copy file="${ParaEngineAB_Root}/worlds/BlockTextures/PackagesInfo.xml" tofile="${res}/worlds/BlockTextures/PackagesInfo.xml"/>
         <copy file="${ParaEngineAB_Root}/fonts/ParaEngineThaiFont.ttf" tofile="${res}/fonts/ParaEngineThaiFont.ttf"/>
         <copy file="${ParaEngineAB_Root}/Texture/Aries/Creator/Mobile/blocks_Background.png" tofile="${res}/Texture/Aries/Creator/Mobile/blocks_Background.png"/>
         <copy file="${ParaEngineAB_Root}/Texture/dxutcontrols.dds" tofile="${res}/Texture/dxutcontrols.dds"/>
