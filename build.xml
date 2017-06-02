@@ -28,6 +28,7 @@ Using ant to create the minimum art resource for paracraft
         <copy file="${ParaEngineAB_Root}/config/Aries/creator/block_list.xml" tofile="${res}/config/Aries/creator/block_list.xml"/>
         <copy file="${ParaEngineAB_Root}/config/Aries/creator/block_types.xml" tofile="${res}/config/Aries/creator/block_types.xml"/>
         <copy file="${ParaEngineAB_Root}/config/Aries/creator/block_types_template.xml" tofile="${res}/config/Aries/creator/block_types_template.xml"/>
+		<copy file="${ParaEngineAB_Root}/config/Aries/creator/local_texture_replace.xml" tofile="${res}/config/Aries/creator/local_texture_replace.xml"/>
         <copy file="${ParaEngineAB_Root}/config/ParaCraft/bootstrapper.xml" tofile="${res}/config/bootstrapper.xml"/>
         <copy file="${ParaEngineAB_Root}/config/ParaCraft/bootstrapper_safemode.xml" tofile="${res}/config/bootstrapper_safemode.xml"/>
         <copy file="${ParaEngineAB_Root}/config/ParaCraft/commands.xml" tofile="${res}/config/commands.xml"/>
@@ -105,6 +106,12 @@ Using ant to create the minimum art resource for paracraft
          <copy todir="${res}/Texture/blocks">
             <fileset dir="${ParaEngineAB_Root}/Texture/blocks">
                 <include name="**/*.png"/>
+            </fileset>
+        </copy>
+		<copy todir="${res}/Texture/tileset/blocks">
+            <fileset dir="${ParaEngineAB_Root}/Texture/tileset/blocks">
+                <include name="**/*.png"/>
+				<include name="**/*.dds"/>
             </fileset>
         </copy>
         <copy todir="${res}/Texture/Effect">
